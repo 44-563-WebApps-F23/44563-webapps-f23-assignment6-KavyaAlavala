@@ -13,7 +13,31 @@
 
     <label for="form1_tipPercentValue">Enter the tip percent</label>
     <input type ="number" id="form1_tipPercentValue" name="form1_tipPercentValue" value="15"> <br>
-    <input type="button" onclick="tips()" value="show tips">
+    <input type="button" onclick="tips()" value="show tip">
     </form>
+    <p id="result">To show tip amount click on "show tip"</p>
+
+<script> 
+function tips() {
+        const base_AmountValue = parseFloat(document.getElementById('form1_baseAmountValue').value);
+        const tip_Percent = parseFloat(document.getElementById('form1_tipPercentValue').value);
+            let myOutput="";
+            let toShow= "";
+
+            for (let i = 0; i < 5; i++) {
+                const tipLevel = tip_Percent + i * 4;
+                const calculatedTip = (base_AmountValue * tipLevel) / 100;
+                toShow += `${tipLevel}% is ${calculatedTip.toFixed(1)}; `;
+            }
+            // const tip_Amount = (base_AmountValue * tip_Percent) / 100;
+
+            myOutput = `Tips are: ${toShow}`;
+
+            document.getElementById('result').textContent = myOutput;
+        }
+
+
+</script>
+
 </body>
 </html> 
