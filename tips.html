@@ -15,7 +15,7 @@
     <input type ="number" id="form1_tipPercentValue" name="form1_tipPercentValue" value="15"> <br>
     <input type="button" onclick="tips()" value="show tip">
     </form>
-    <p id="result">To show tip amount click on "show tip"</p>
+    <p id="result">Tips are: $(toShow)</p>
 
     <form>
         <input type="radio" id="calcSum" name="operation" value="sum" onclick="chooseOp()">
@@ -41,8 +41,7 @@ function tips() {
                 const calculatedTip = (base_AmountValue * tipLevel) / 100;
                 toShow += `${tipLevel}% is ${calculatedTip.toFixed(1)}; `;
             }
-            // const tip_Amount = (base_AmountValue * tip_Percent) / 100;
-
+            
             myOutput = `Tips are: ${toShow}`;
 
             document.getElementById('result').textContent = myOutput;
