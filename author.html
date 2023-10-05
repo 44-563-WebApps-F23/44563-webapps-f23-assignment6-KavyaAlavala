@@ -8,11 +8,15 @@
 
 <h2>Author entry KavyaAlavala</h2>
 <form>
-    <label for="hiddenAuthor">The hidden Author Name </label>
-    <input type ="password" id="hiddenAuthor" name="author_name"  value="Dickens" disabled> <br>
-
-    <label for="guessAuthor">Guess the Author </label>
-    <input type ="text" id="guessAuthor" name="guessAuthor" autofocus> <br>
+    <div class="mb-3">
+      <label for="form1_age">The hidden author name</label>
+      <input type="password" id="form1_age" name="form1_age" min=10 max=50 step=2 value="Dickens">
+    </div>
+    <div class="mb-3">
+      <label for="form1_nick">Guess the author</label>
+      <input type="text" id="form1_nick" name="form1_nick" autofocus>
+    </div>
+    <input class="btn btn-primary mb-3" type="button" id="authButton" value="Check the guess" onclick="checkAuthor()">
 
     
 </form>
