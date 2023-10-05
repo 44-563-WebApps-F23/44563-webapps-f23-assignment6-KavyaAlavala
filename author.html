@@ -8,16 +8,16 @@
 
 <h2>Author entry KavyaAlavala</h2>
 <form>
-      <label for="form1_age">The hidden author name</label>
-      <input type="password" id="form1_age" name="form1_age" min=10 max=50 step=2 value="Dickens">
+      <label for="hiddenAuthor">The hidden author name</label>
+      <input type="password" id="hiddenAuthor" name="form1_name" value="Dickens" disabled><br>
 
-      <label for="form1_nick">Guess the author</label>
-      <input type="text" id="form1_nick" name="form1_nick" autofocus>
-    <input class="btn btn-primary" type="button" id="authButton" value="Check the guess" onclick="checkAuthor()">
+      <label for="guessAuthor">Guess the author</label>
+      <input type="text" id="guessAuthor" name="guessAuthor" autofocus><br>
+    <input class="btn btn-primary" type="button"  value="Check the guess" onclick="checkAuthor()">
 
     
 </form>
-<button type="button" class="btn btn-primary" id="checkButton"   onclick="checkAuthor()">check the guess</button>
+
 
 
 <p id="result"> Results: Good - <span id="goodCount">0</span>, Oops - <span id="oopsCount">0</span></p>
